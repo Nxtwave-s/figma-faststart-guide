@@ -5,10 +5,12 @@ import { NextButton } from '@/components/NextButton';
 
 const PracticePage = () => {
   return (
-    <>
+    <div className="container mx-auto py-8 px-4">
       <PracticeActivity />
-      <NextButton href="/" label="Back to Home" />
-    </>
+      <div className="mt-8">
+        <NextButton href="/" label="Back to Home" />
+      </div>
+    </div>
   );
 };
 
