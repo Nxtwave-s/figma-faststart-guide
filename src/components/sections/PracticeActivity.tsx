@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ChevronRight, ArrowRight } from 'lucide-react';
+import { ChevronRight, ArrowRight, Square, Circle, Type, MousePointer } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function PracticeActivity() {
@@ -13,14 +13,14 @@ export function PracticeActivity() {
           <span className="figma-gradient">Practice Your Design Skills</span>
         </h1>
         <p className="text-xl text-muted-foreground">
-          Apply what you've learned in our interactive Penpot editor
+          Apply what you've learned in our interactive editor
         </p>
       </div>
       
       <Card className="p-6 bg-accent/50">
         <h2 className="text-2xl font-bold mb-4">🎯 Practice Activity: Create a Frame</h2>
         <p className="mb-6">
-          Try creating a new frame inside the Penpot editor below. Add rectangles, text, and explore the tools.
+          Try creating a new frame inside the editor below. Add rectangles, text, and explore the tools.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -48,13 +48,30 @@ export function PracticeActivity() {
           
           <div className="md:col-span-2">
             <div className="rounded-lg overflow-hidden border shadow-lg">
-              <iframe
-                src="https://design.penpot.app/#/view/30c46dbc-2019-8006-8006-14e7b7cc3be1?page-id=30c46dbc-2019-8006-8006-14e7b7cc3be2&section=interactions&index=0&share-id=30c46dbc-2019-8006-8006-14ea64bb8061"
-                className="w-full aspect-video"
+              <div className="bg-white p-4 border-b flex items-center gap-3">
+                <MousePointer className="h-4 w-4" />
+                <Square className="h-4 w-4" />
+                <Circle className="h-4 w-4" />
+                <Type className="h-4 w-4" />
+              </div>
+              <div 
+                className="w-full bg-gray-100 flex items-center justify-center"
                 style={{ minHeight: '500px' }}
-                allowFullScreen
-                title="Penpot Editor"
-              />
+              >
+                <div className="text-center p-6">
+                  <img 
+                    src="/lovable-uploads/3b7bf12d-e51f-4784-bf2e-5bbd4896af2c.png" 
+                    alt="Practice Design Area" 
+                    className="max-w-full h-auto opacity-25 mb-4"
+                  />
+                  <p className="text-lg text-gray-600">
+                    External editor couldn't be loaded
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Please imagine using the design tools here
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
