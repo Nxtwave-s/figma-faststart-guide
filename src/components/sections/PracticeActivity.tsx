@@ -49,10 +49,11 @@ export function PracticeActivity() {
           <div className="md:col-span-2">
             <div className="rounded-lg overflow-hidden border shadow-lg">
               <iframe
-                src="https://design.penpot.app/#/view?file-id=30c46dbc-2019-8006-8006-14e7b7cc3be1&page-id=30c46dbc-2019-8006-8006-14e7b7cc3be2&section=interactions&index=0&share-id=30c46dbc-2019-8006-8006-14ea64bb8061"
+                src="https://design.penpot.app/#/view/30c46dbc-2019-8006-8006-14e7b7cc3be1?page-id=30c46dbc-2019-8006-8006-14e7b7cc3be2&section=interactions&index=0&share-id=30c46dbc-2019-8006-8006-14ea64bb8061"
                 className="w-full aspect-video"
                 style={{ minHeight: '500px' }}
                 allowFullScreen
+                title="Penpot Editor"
               />
             </div>
           </div>
