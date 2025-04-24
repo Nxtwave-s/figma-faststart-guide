@@ -15,7 +15,7 @@ export function NextButton({ href, className }: NextButtonProps) {
       asChild
       variant="default"
       className={cn(
-        "fixed bottom-4 right-4 z-50 shadow-lg",
+        "fixed bottom-4 right-4 z-50 shadow-lg hover:shadow-xl",
         "bg-figma-green hover:bg-figma-green/90",
         className
       )}
