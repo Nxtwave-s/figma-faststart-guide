@@ -1,11 +1,14 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function PracticeActivity() {
+  useEffect(() => {
+    console.log('Penpot Editor URL:', 'https://design.penpot.app/#/view/30c46dbc-2019-8006-8006-14e7b7cc3be1?page-id=30c46dbc-2019-8006-8006-14e7b7cc3be2&section=interactions&index=0&share-id=30c46dbc-2019-8006-8006-14ea64bb8061');
+  }, []);
+
   return (
     <div className="space-y-8 animate-fade-in">
       <div className="text-center max-w-3xl mx-auto">
@@ -20,7 +23,7 @@ export function PracticeActivity() {
       <Card className="p-6 bg-accent/50">
         <h2 className="text-2xl font-bold mb-4">🎯 Practice Activity: Create a Frame</h2>
         <p className="mb-6">
-          Try creating a new frame inside the editor below. Add rectangles, text, and explore the tools.
+          Try creating a new frame inside the Penpot editor below. Add rectangles, text, and explore the tools.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
