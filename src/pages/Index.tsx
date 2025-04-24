@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <>
       <FigmaFastStartLayout />
-      <NextButton href="/shapes" />
+      <NextButton href="/shapes" label="Explore Shapes" />
     </>
   );
 };

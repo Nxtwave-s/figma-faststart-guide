@@ -7,7 +7,7 @@ const ShapesPage = () => {
   return (
     <>
       <Shapes />
-      <NextButton href="/practice" />
+      <NextButton href="/practice" label="Try Practice Activities" />
     </>
   );
 };

@@ -8,9 +8,10 @@ import { Link } from 'react-router-dom';
 interface NextButtonProps {
   href: string;
   className?: string;
+  label?: string;
 }
 
-export function NextButton({ href, className }: NextButtonProps) {
+export function NextButton({ href, className, label = "Next Session" }: NextButtonProps) {
   return (
     <Button
       asChild
@@ -22,7 +23,7 @@ export function NextButton({ href, className }: NextButtonProps) {
       )}
     >
       <Link to={href}>
-        Next Session
+        {label}
         <ArrowRight className="ml-2 h-4 w-4" />
       </Link>
     </Button>

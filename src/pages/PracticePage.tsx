@@ -7,7 +7,7 @@ const PracticePage = () => {
   return (
     <>
       <PracticeActivity />
-      <NextButton href="/" />
+      <NextButton href="/" label="Back to Home" />
     </>
   );
 };

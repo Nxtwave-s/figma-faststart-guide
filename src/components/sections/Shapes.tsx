@@ -138,7 +138,7 @@ export function Shapes() {
         </div>
       </Card>
       
-      <div className="flex justify-center">
+      <div className="flex justify-end">
         <Button asChild size="lg" className="bg-figma-purple hover:bg-figma-purple/90 gap-2">
           <Link to="/practice">
             Practice Shape Tools

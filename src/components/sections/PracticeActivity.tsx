@@ -3,7 +3,8 @@ import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FigmaEditor } from '@/components/FigmaEditor';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function PracticeActivity() {
   return (
@@ -62,10 +63,12 @@ export function PracticeActivity() {
         </div>
       </Card>
       
-      <div className="flex justify-center">
-        <Button size="lg" className="bg-figma-purple hover:bg-figma-purple/90 gap-2">
-          Continue Learning
-          <ChevronRight className="h-4 w-4" />
+      <div className="flex justify-end">
+        <Button asChild size="lg" className="bg-figma-purple hover:bg-figma-purple/90 gap-2">
+          <Link to="/">
+            Next Session: Going Back Home
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </Button>
       </div>
     </div>

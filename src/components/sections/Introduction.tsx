@@ -11,7 +11,7 @@ export function Introduction() {
     <div className="space-y-8 animate-fade-in">
       <div className="text-center max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">
-          <span className="figma-gradient">Getting Started with Figma – A Fast & Effective Guide</span>
+          <span className="figma-gradient">Getting Started with Figma – An Effective Guide</span>
         </h1>
         <p className="text-xl text-muted-foreground">
           Your hands-on guide to learning Figma's powerful design features quickly and effectively.

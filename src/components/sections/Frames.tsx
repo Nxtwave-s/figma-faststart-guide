@@ -16,6 +16,7 @@ import {
   Monitor, 
   LayoutGrid 
 } from 'lucide-react';
+import { FigmaEditor } from '@/components/FigmaEditor';
 
 export function Frames() {
   const [selectedFrameType, setSelectedFrameType] = useState('custom');
@@ -93,8 +94,12 @@ export function Frames() {
                   
                   <div className="bg-white border rounded-md p-4 h-40 flex items-center justify-center">
                     <div className="text-center space-y-2">
-                      <Square className="mx-auto text-figma-purple" size={36} />
-                      <p className="text-sm text-muted-foreground">Interactive frame creation demo would appear here</p>
+                      <img 
+                        src="https://cdn.lovable.dev/?width=400&height=120&url=https%3A%2F%2Fplaceholder.pics%2Fsvg%2F400x120%2FDEDEDE%2F555555%2FFigma%2520Toolbar%2520Interface" 
+                        alt="Figma Toolbar" 
+                        className="mx-auto max-h-28"
+                      />
+                      <p className="text-sm text-muted-foreground">Figma Toolbar with Frame Tool highlighted</p>
                     </div>
                   </div>
                 </div>
@@ -266,21 +271,40 @@ export function Frames() {
           
           <div className="mt-6">
             <h4 className="font-medium mb-3">Practice Activity: Frame Basics</h4>
-            <div className="bg-figma-purple/5 border border-figma-purple/20 rounded-md p-4">
-              <p className="mb-3">Try creating:</p>
-              <ol className="space-y-2 pl-5 list-decimal">
-                <li>A mobile app frame (iPhone 13)</li>
-                <li>A desktop website frame (1440 × 900)</li>
-                <li>A component frame with nested elements</li>
-              </ol>
-              
-              <Button className="mt-4 bg-figma-purple hover:bg-figma-purple/90">
-                Download Practice File
-              </Button>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="bg-figma-purple/5 border border-figma-purple/20 rounded-md p-4">
+                <p className="mb-3">Create these frames:</p>
+                <ol className="space-y-2 pl-5 list-decimal">
+                  <li>A mobile app frame (iPhone 13)</li>
+                  <li>A desktop website frame (1440 × 900)</li>
+                  <li>A component frame with nested elements</li>
+                </ol>
+                <div className="mt-4">
+                  <img 
+                    src="https://cdn.lovable.dev/?width=400&height=200&url=https%3A%2F%2Fplaceholder.pics%2Fsvg%2F400x200%2FDEDEDE%2F555555%2FFrame%2520Examples" 
+                    alt="Frame Examples" 
+                    className="mx-auto rounded border"
+                  />
+                  <p className="text-sm text-muted-foreground text-center mt-2">Example frames with different sizes</p>
+                </div>
+              </div>
+              <div className="border rounded-md p-4">
+                <h5 className="text-sm font-medium mb-3">Try it yourself:</h5>
+                <FigmaEditor />
+              </div>
             </div>
           </div>
         </CardContent>
       </Card>
+      
+      <div className="flex justify-end">
+        <Button asChild size="lg" className="bg-figma-purple hover:bg-figma-purple/90 gap-2">
+          <Link to="/shapes">
+            Next Session: Shapes
+            <ChevronRight className="h-4 w-4" />
+          </Link>
+        </Button>
+      </div>
     </div>
   );
 }
