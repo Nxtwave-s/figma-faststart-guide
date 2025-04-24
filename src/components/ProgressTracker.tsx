@@ -13,7 +13,9 @@ export function ProgressTracker({ currentSection, sections, scrollProgress }: Pr
   return (
     <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-40 hidden md:block">
       <div className="bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-md">
-        <Progress value={scrollProgress} className="w-2 h-40 bg-gray-200 rounded-full" orientation="vertical" />
+        <div className="h-40 w-2">
+          <Progress value={scrollProgress} className="h-full w-full bg-gray-200 rounded-full" />
+        </div>
         
         <div className="mt-4 flex flex-col items-center space-y-2">
           {sections.map((section, index) => (
