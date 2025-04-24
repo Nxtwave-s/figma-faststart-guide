@@ -4,8 +4,16 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Shapes() {
+  // State for the shape editor simulation
+  const [selectedShape, setSelectedShape] = React.useState<string | null>(null);
+  
+  const handleShapeClick = (shape: string) => {
+    setSelectedShape(shape);
+  };
+  
   return (
     <div className="space-y-8 animate-fade-in">
       <div className="text-center max-w-3xl mx-auto">
@@ -74,15 +82,24 @@ export function Shapes() {
             </div>
             
             <div className="grid grid-cols-3 gap-4 mb-6">
-              <button className="border p-4 rounded-lg hover:bg-accent/50 transition-colors">
+              <button 
+                className={`border p-4 rounded-lg transition-colors ${selectedShape === 'rectangle' ? 'bg-accent' : 'hover:bg-accent/50'}`}
+                onClick={() => handleShapeClick('rectangle')}
+              >
                 <div className="w-16 h-16 bg-figma-blue/80 rounded-sm mx-auto"></div>
                 <p className="text-sm mt-2">Rectangle</p>
               </button>
-              <button className="border p-4 rounded-lg hover:bg-accent/50 transition-colors">
+              <button 
+                className={`border p-4 rounded-lg transition-colors ${selectedShape === 'circle' ? 'bg-accent' : 'hover:bg-accent/50'}`}
+                onClick={() => handleShapeClick('circle')}
+              >
                 <div className="w-16 h-16 rounded-full bg-figma-purple/80 mx-auto"></div>
                 <p className="text-sm mt-2">Ellipse</p>
               </button>
-              <button className="border p-4 rounded-lg hover:bg-accent/50 transition-colors">
+              <button 
+                className={`border p-4 rounded-lg transition-colors ${selectedShape === 'triangle' ? 'bg-accent' : 'hover:bg-accent/50'}`}
+                onClick={() => handleShapeClick('triangle')}
+              >
                 <div className="w-16 h-16 mx-auto flex items-center justify-center">
                   <div className="w-0 h-0 border-l-[30px] border-l-transparent border-b-[52px] border-b-figma-green/80 border-r-[30px] border-r-transparent"></div>
                 </div>
@@ -91,7 +108,11 @@ export function Shapes() {
             </div>
             
             <div className="text-center">
-              <p className="text-sm text-muted-foreground">This is an interactive simulation to practice shape creation</p>
+              <p className="text-sm text-muted-foreground">
+                {selectedShape 
+                  ? `You selected: ${selectedShape}. Try selecting a different shape!` 
+                  : 'Click on a shape to select it'}
+              </p>
             </div>
           </div>
         </div>
@@ -118,9 +139,11 @@ export function Shapes() {
       </Card>
       
       <div className="flex justify-center">
-        <Button size="lg" className="bg-figma-purple hover:bg-figma-purple/90 gap-2">
-          Practice Shape Tools
-          <ArrowRight className="h-4 w-4" />
+        <Button asChild size="lg" className="bg-figma-purple hover:bg-figma-purple/90 gap-2">
+          <Link to="/practice">
+            Practice Shape Tools
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </Button>
       </div>
     </div>

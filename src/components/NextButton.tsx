@@ -22,7 +22,7 @@ export function NextButton({ href, className }: NextButtonProps) {
       )}
     >
       <Link to={href}>
-        Next Section
+        Next Session
         <ArrowRight className="ml-2 h-4 w-4" />
       </Link>
     </Button>

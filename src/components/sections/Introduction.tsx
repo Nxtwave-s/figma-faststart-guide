@@ -1,8 +1,10 @@
+
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Introduction() {
   return (
@@ -95,9 +97,11 @@ export function Introduction() {
       </Card>
       
       <div className="flex justify-center">
-        <Button size="lg" className="bg-figma-purple hover:bg-figma-purple/90 gap-2">
-          Start Learning
-          <ChevronRight className="h-4 w-4" />
+        <Button asChild size="lg" className="bg-figma-purple hover:bg-figma-purple/90 gap-2">
+          <Link to="/shapes">
+            Start Learning
+            <ChevronRight className="h-4 w-4" />
+          </Link>
         </Button>
       </div>
     </div>
