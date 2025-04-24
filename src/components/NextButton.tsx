@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 interface NextButtonProps {
   href: string;
@@ -20,10 +21,10 @@ export function NextButton({ href, className }: NextButtonProps) {
         className
       )}
     >
-      <a href={href}>
+      <Link to={href}>
         Next Section
         <ArrowRight className="ml-2 h-4 w-4" />
-      </a>
+      </Link>
     </Button>
   );
 }
